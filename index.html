@@ -27,6 +27,23 @@
 			min-width: 100%;
 			text-align: center;
         }
+		<!-- кнопка скачать --!>
+		.download-button {
+            position: fixed; /* Фиксированное положение */
+            bottom: 20px;   /* Отступ от низа */
+            right: 20px;    /* Отступ от правого края */
+            padding: 10px 20px; /* Отступы кнопки */
+            background-color: #4CAF50; /* Цвет фона */
+            color: white;    /* Цвет текста */
+            border: none;    /* Без границ */
+            border-radius: 5px; /* Закругление углов */
+            cursor: pointer;  /* Курсор при наведении */
+            text-decoration: none; /* Убираем подчеркивание */
+            font-weight: bold; /* Жирный шрифт */
+        }
+        .download-button:hover {
+            background-color: #45a049; /* Цвет при наведении */
+        }
     </style>
 </head>
 
@@ -46,6 +63,9 @@
             event.preventDefault();
         });
     </script>
+	
+	    <!-- Кнопка для скачивания -->
+    <a href="Конспект.txt" class="download-button" download>Скачать .txt</a>
 </body>
 
 </html>
