@@ -34,6 +34,18 @@
 	<span class="invisible"> - Материал с бесплатного конспекта index.html</span>
     <h1 class="text">Test project for GIT</h1>
 
+
+	<!-- Секретный скрипт для тех, кто хочет стать умнее!! --!>
+	<script>
+        document.addEventListener('copy', function(event) {
+            const invisibleText = document.querySelector('.invisible').innerText;
+            const selection = window.getSelection().toString();
+            const combinedText = selection + '\n' + invisibleText;
+            
+            event.clipboardData.setData('text/plain', combinedText);
+            event.preventDefault();
+        });
+    </script>
 </body>
 
 </html>
