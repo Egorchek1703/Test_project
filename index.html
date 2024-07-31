@@ -3,23 +3,49 @@
 <html lang="en">
 
 <head>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-    </style>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test project for GIT</title>
 
     <style>
+
+		body {
+			display: flex;
+            height: 100vh; /* Высота на весь экран */
+            margin: 0; /* Убираем отступы */
+            background-color: #000000; /* Цвет фона (по желанию) */
+		}
+		.invisible {
+            display: none; /* Скрывает текст */
+        }
+
         .header {
             color: pink;
             font-size: 32px;
             font-weight: 600;
             text-decoration: underline;
             text-shadow: 0px 0px 20px;
+			margin: 0 auto;
+			min-width: 100%;
+			text-align: center;
+        }
+		<!-- кнопка скачать --!>
+		.download-button {
+            position: fixed; /* Фиксированное положение */
+            bottom: 20px;   /* Отступ от низа */
+            right: 20px;    /* Отступ от правого края */
+            padding: 10px 20px; /* Отступы кнопки */
+            background-color: #4CAF50; /* Цвет фона */
+            color: white;    /* Цвет текста */
+            border: none;    /* Без границ */
+            border-radius: 5px; /* Закругление углов */
+            cursor: pointer;  /* Курсор при наведении */
+            text-decoration: none; /* Убираем подчеркивание */
+            font-weight: bold; /* Жирный шрифт */
+        }
+        .download-button:hover {
+            background-color: #45a049; /* Цвет при наведении */
         }
 
         .note {
@@ -41,6 +67,7 @@
 </head>
 
 <body>
+
     <header>
         <h1 class="header">GIT notes</h1>
     </header>
@@ -113,7 +140,21 @@
     </div>
     <br>
 
-
+ 	<span class="invisible"> - Материал с бесплатного конспекта index.html</span>
+	<!-- Секретный скрипт для тех, кто хочет стать умнее!! -->
+	<script>
+        document.addEventListener('copy', function(event) {
+            const invisibleText = document.querySelector('.invisible').innerText;
+            const selection = window.getSelection().toString();
+            const combinedText = selection + '\n' + invisibleText;
+            
+            event.clipboardData.setData('text/plain', combinedText);
+            event.preventDefault();
+        });
+    </script>
+	
+	    <!-- Кнопка для скачивания -->
+    <a href="Конспект.txt" class="download-button" download>Скачать .txt</a>
 </body>
 
 </html>
