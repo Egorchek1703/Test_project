@@ -3,11 +3,13 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test project for GIT</title>
 
     <style>
+
 		body {
 			display: flex;
             height: 100vh; /* Высота на весь экран */
@@ -17,7 +19,8 @@
 		.invisible {
             display: none; /* Скрывает текст */
         }
-        .text {
+
+        .header {
             color: pink;
             font-size: 32px;
             font-weight: 600;
@@ -44,15 +47,101 @@
         .download-button:hover {
             background-color: #45a049; /* Цвет при наведении */
         }
+
+        .note {
+            padding: 20%;
+        }
+
+        .command {
+            color: greenyellow;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .description {
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+        }
     </style>
 </head>
 
 <body>
-	<span class="invisible"> - Материал с бесплатного конспекта index.html</span>
-    <h1 class="text">Test project for GIT</h1>
+
+    <header>
+        <h1 class="header">GIT notes</h1>
+    </header>
 
 
-	<!-- Секретный скрипт для тех, кто хочет стать умнее!! --!>
+    <div class="note">
+        <span class="command">git init</span> - <span class="description">
+            создает репозиторий в текущей директории
+        </span>
+    </div>
+    <br>
+    <div class="note">
+        <span class="command">git add</span> - <span class="description">
+            добавляет файлы или директории в "индекс" (облако в котором храняться изменения перед их записью в
+            репозиторий (перед созданием коммита))
+        </span>
+    </div>
+    <br>
+    <div class="note">
+        <span class="command">git fetch</span> - <span class="description">
+            переносит изменения из виртуального репозитория в локальный (запрос на актуализацию изменений со стороны
+            других разработчиков)
+            Не объединяет изменения с локальным репозиторием
+        </span>
+    </div>
+    <br>
+    <div class="note">
+        <span class="command">git pull</span> - <span class="description">
+            переносит изменения из виртуального репозитория в локальный, но при этом объединяет их с нашим локальным
+            репозиторием (комбинация
+            двух команд "git fetch" и "git merge")
+        </span>
+    </div>
+    <br>
+    <div class="note">
+        <span class="command">git push</span> - <span class="description">
+            отправляет коммиты из локального репозитория в удаленный
+        </span>
+    </div>
+    <br>
+    <div class="note">
+        <span class="command">git branch</span> - <span class="description">
+            создать ветку
+        </span>
+    </div>
+    <br>
+    <div class="note">
+        <span class="command">git checkout</span> - <span class="description">
+            сменить ветку в которой работаем
+        </span>
+    </div>
+    <br>
+    <div class="note">
+        <span class="command">git checkout -b</span> - <span class="description">
+            создать и сменить ветку одновременно
+        </span>
+    </div>
+    <br>
+    <div class="note">
+        Чтобы исключить файлы и директории из репозитория существует специальный файл .gitignore.txt, в котором:
+        # - Комментарий
+        /Name - название папки
+        *.dns - все файлы с указанным расширением
+    </div>
+    <br>
+    <div class="note">
+        Pull request - это контейнер для ветки в котором мы собираем все изменения перед объединением с главной веткой.
+        Также в Pull request собирает итоговый
+        файл исходя из всех коммитов который были сделаны в ветке
+    </div>
+    <br>
+
+ 	<span class="invisible"> - Материал с бесплатного конспекта index.html</span>
+	<!-- Секретный скрипт для тех, кто хочет стать умнее!! -->
 	<script>
         document.addEventListener('copy', function(event) {
             const invisibleText = document.querySelector('.invisible').innerText;
